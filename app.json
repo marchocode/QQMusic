@@ -11,7 +11,7 @@
   "window":{
     "backgroundTextStyle":"dark",
     "navigationBarBackgroundColor": "#31c27c",
-    "navigationBarTitleText": "音乐播放器",
+    "navigationBarTitleText": "芊芊音乐播放器",
     "navigationBarTextStyle":"white",
     "enablePullDownRefresh":true,
     "backgroundColor": "#666"

@@ -13,7 +13,7 @@
     <!-- lrc start -->
     <view class='play-lrc'>
       <view class='lrc' style='height:64px'>
-        <text>歌词</text>
+        <text>{{lrcContext}}</text>
       </view>
     </view>
     <!-- lrc end -->

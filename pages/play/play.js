@@ -19,7 +19,10 @@ Page({
     isPlay: true,
     downProgress: "0",
     playProgress:"0",
-    songLenth:0,//歌曲秒数
+    songLenth:0,
+    LrcArray:[],
+    LrcArrayIndex:0,//歌词数组指针
+    lrcContext:""//歌词内容
   },
 
   /**
@@ -28,17 +31,65 @@ Page({
   onLoad: function(options) {
     
     this.setData({
-      index: options.index,
-      sing: app.sings,
-      songs: app.sings[options.index]
+      index: options.index,//下标
+      sing: app.sings,//播放列表
+      songs: app.sings[options.index]//正在播放的歌曲
     })
 
 
-    console.log(this.data.songs);
+    //console.log(this.data.songs);
+
+    //请求歌词
+    this.loadLrc();
 
     wx.showLoading({
       title: '正在加载',
     })
+    
+
+  },
+  //加载歌词
+  loadLrc:function(){
+
+    var array = new Array();
+    var temp = this;
+    wx.request({
+      url: temp.data.songs.lrc,
+      method: 'GET',
+      dataType: '其他',
+      success: function(res) {
+        
+        var arr = res.data.split("\n");
+
+        var LrcArray = arr.slice(arr.indexOf("[offset:0]")+1);
+
+        LrcArray.forEach(function (item) {
+          //遍历数组
+
+          var t = item.substring(item.indexOf("[") + 1, item.indexOf("]"));
+          array.push({
+            //歌词处理放入对象数组；
+            t: (t.split(":")[0] * 60 + parseFloat(t.split(":")[1])).toFixed(3),
+            c: item.substring(item.indexOf("]") + 1, item.length)
+          });
+
+
+        });
+
+        temp.setData({
+
+          LrcArray: array
+
+        })
+
+
+
+      }
+    })
+
+
+    
+   
     
 
   },
@@ -88,15 +139,32 @@ Page({
         isPlay: true //切换css
       })
 
-    })
+    });
+
+    
+
     player.onTimeUpdate(function(){
       //监听播放进度改变
       //计算百分百，改变进度条进度
-      var len = Math.round(player.duration);//总秒数
-
-      var inde = Math.round(player.currentTime);//当前秒
+      
+      var len = player.duration.toFixed(3);//总秒数,保留三位小数
+      
+      var inde = player.currentTime.toFixed(3);//当前秒
       
       var bfb = (inde/len)*100;//百分比
+
+
+
+
+      if (inde >= temp.data.LrcArray[temp.data.LrcArrayIndex].t) {
+          temp.setData({
+
+            lrcContext: temp.data.LrcArray[temp.data.LrcArrayIndex].c,
+            LrcArrayIndex: temp.data.LrcArrayIndex+1
+          })
+
+      }
+
       temp.setData({
         playProgress: bfb,
         songLenth: len
