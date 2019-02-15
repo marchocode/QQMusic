@@ -1,0 +1,42 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/sou/sou",
+    "pages/pai/pai",
+    "pages/showlist/showlist",
+    "pages/play/play"
+    
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#31c27c",
+    "navigationBarTitleText": "音乐播放器",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh":true,
+    "backgroundColor": "#666"
+  },
+  "tabBar": {
+    "list": [
+      {
+      "pagePath": "pages/index/index",
+      "text": "推荐"
+     
+      },
+      {
+        "pagePath": "pages/pai/pai",
+        "text": "排行"
+        
+      },
+      {
+        "pagePath": "pages/sou/sou",
+        "text": "搜索"
+        
+      }
+    
+    ],
+    "color": "#333333",
+    "selectedColor": "#31c27c",
+    "position":"top"
+  }
+}

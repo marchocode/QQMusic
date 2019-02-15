@@ -1,0 +1,41 @@
+<view class='playerBackground' hidden='{{show}}'>
+  <view class='playertop'>
+    <text>{{songs.name}}</text>
+  </view>
+
+  <!-- center start -->
+  <view class='playcenter'>
+    <!-- img start -->
+    <view class='center-img'>
+      <image src='{{songs.pic}}'></image>
+    </view>
+    <!-- img end -->
+    <!-- lrc start -->
+    <view class='play-lrc'>
+      <view class='lrc' style='height:64px'>
+        <text>歌词</text>
+      </view>
+    </view>
+    <!-- lrc end -->
+    <!-- 进度条 start -->
+    <view class='jindu'>
+      <slider min='0' max='100' block-size="20" block-color="#31c27c" bindchange='jumpToTime' value='{{playProgress}}'></slider>
+    </view>
+    <!-- 进度条 end -->
+
+    <!-- button start -->
+    <view class='buttons'>
+      <i class="iconfont icon-left icon-shangyiqu101" bindtap='lastPlay'></i>
+      <i class="iconfont icon-cen {{isPlay? 'icon-bofang':'icon-zanting'}}" bindtap="playmusic"></i>
+      <i class="iconfont icon-left icon-xiayiqu101" bindtap="nextPlay"></i>
+    </view>
+    <!-- button end -->
+
+    <view class='btn-down' bindtap='downsong'>
+      <i class='iconfont icon-xiazai btn-size'></i>
+    </view>
+
+    <progress class='down-progress' percent='{{downProgress}}'></progress>
+  </view>
+  <!-- center end -->
+</view>

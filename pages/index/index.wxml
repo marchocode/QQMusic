@@ -1,0 +1,25 @@
+<swiper indicator-dots="true" autoplay="true" indicator-color="rgba(231,231,231,1)" indicator-active-color='rgba(255, 255, 255,1)' interval='3000'>
+  <block wx:for="{{swiperItem}}" wx:key="u">
+    <swiper-item>
+      <image src='{{item}}' class='images'></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 热门歌单 -->
+
+<view class='singList'>
+  <text>热门歌单</text>
+
+</view>
+<view class='singList'>
+
+  <block wx:for="{{singList}}" wx:key="s">
+    <view class='lists'>
+      <image src='{{item.pic}}' id="{{item.id}}" class='listpicture' bindtap='taptoLists'></image>
+      <text class='listfont'>{{item.title}}</text>
+    </view>
+
+  </block>
+
+</view>

@@ -1,0 +1,26 @@
+.images{
+  width: 100%;
+  height: 100%;
+}
+.singList{
+  margin-top: 10px;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+text {
+  font-size: 16px;
+}
+.listpicture{
+  width: 230rpx;
+  height: 230rpx;
+  
+}
+.lists{
+  display: inline-block;
+  margin-right: 6rpx;
+}
+.listfont{
+  display: block;
+  font-size: 12px;
+
+}

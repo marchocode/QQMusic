@@ -1,0 +1,40 @@
+<view hidden='{{isShow}}'>
+  <!-- 上部分开始 -->
+  <view class='top'>
+    <view class='album'>
+      <view class='album-left'>
+        <image src='{{logo}}'></image>
+      </view>
+      <view class='album-right'>
+        <text>{{title}}</text>
+        <text style='font-size:12px'>创建：{{author}}</text>
+      </view>
+    </view>
+
+    <view class='btn-view'>
+      <button type='primary' class='btn'>播放全部  <i class="iconfont icon-bofang"></i></button>
+    </view>
+
+  </view>
+  <!-- top结束 -->
+  <!-- center start -->
+  <view class='ul'>
+   
+    <block wx:for="{{singlist}}" wx:key="{{index}}">
+     <view class='li' id='{{index}}' bindtap='navtoplay'>
+        <view class='li-left'>{{index+1}}</view>
+        <view class='li-center'>{{item.name}} — {{item.singer}}</view>
+        <view class='li-play'>
+          <i class='iconfont icon-bofang li-img'></i>
+        </view>
+      </view>
+    
+    </block>
+      
+
+
+  </view>
+  <!-- center over -->
+
+
+</view>
