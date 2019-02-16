@@ -1,8 +1,9 @@
 {
   "pages":[
+    "pages/pai/pai",
     "pages/index/index",
     "pages/sou/sou",
-    "pages/pai/pai",
+    
     "pages/showlist/showlist",
     "pages/play/play"
     

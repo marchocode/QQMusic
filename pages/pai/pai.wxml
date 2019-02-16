@@ -1,2 +1,27 @@
-<!--pages/pai/pai.wxml-->
-<text>pages/pai/pai.wxml</text>
+<!-- 开始 -->
+
+<view class='ul'>
+
+
+    <block wx:for="{{songsList}}">
+      <view class='li'>
+      <view class='content-img'>
+        <image src="{{item.pic}}" class='img'></image>
+      </view>
+      <view class='content-right'>
+        <!-- right content -->
+        <view class='right_cont'>
+          <view class='title'>{{item.name}}</view>
+          <view class='author'>创建：{{item.creator}}</view>
+          <view class='author'>时间：{{item.createTime}}</view>
+          <view class='author'>播放：{{item.playCount}}</view>
+        </view>
+      </view>
+    </view>
+    
+    </block>
+
+    
+
+    
+</view>

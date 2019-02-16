@@ -1,11 +1,15 @@
 // pages/pai/pai.js
+
+var app = getApp();
+var imp = require("../../utils/util.js")
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    songsList:[]
   },
 
   /**
@@ -13,6 +17,23 @@ Page({
    */
   onLoad: function (options) {
 
+    var temp = this;
+
+    wx.request({
+      url: imp.paiUrl,
+      method: 'GET',
+      dataType: 'json',
+      responseType: 'text',
+      success: function(res) {
+        temp.setData({
+
+          songsList:res.data.data
+          
+        })
+      },
+      fail: function(res) {},
+      complete: function(res) {},
+    })
   },
 
   /**
