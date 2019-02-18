@@ -3,8 +3,8 @@
 <view class='ul'>
 
 
-    <block wx:for="{{songsList}}">
-      <view class='li'>
+    <block wx:for="{{songsList}}" wx:key="{{index}}" >
+      <view class='li' bindtap='jumpListPage' id='{{item.id}}'>
       <view class='content-img'>
         <image src="{{item.pic}}" class='img'></image>
       </view>

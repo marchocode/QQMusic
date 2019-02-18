@@ -1,7 +1,6 @@
-// pages/pai/pai.js
+// pages/mvPlay/mvPlay.js
 
-var app = getApp();
-var imp = require("../../utils/util.js")
+var imp = require("../../utils/util.js");
 
 Page({
 
@@ -9,35 +8,36 @@ Page({
    * 页面的初始数据
    */
   data: {
-    songsList:[]
+    MV:{}
   },
-  jumpListPage:function(e) {
-    //跳转页面
-    var id = e.currentTarget.id;
-    wx.navigateTo({
-      url: '../showlist/showlist?id='+id,
-    })
 
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
 
-    var temp = this;
+    var id = options.id;
 
+    wx.showLoading({
+      title: '正在加载',
+      
+    })
+    var temp = this;
     wx.request({
-      url: imp.paiUrl,
+      url: imp.mvDetail,
+      data: {
+        key: 579621905,
+        id: id
+      },
       method: 'GET',
       dataType: 'json',
       responseType: 'text',
       success: function(res) {
+        //console.log(res.data.data);
         temp.setData({
-
-          songsList:res.data.data
-          
+          MV:res.data.data
         })
-      }
+      },
       
     })
   },
@@ -46,7 +46,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    wx.hideLoading();
   },
 
   /**

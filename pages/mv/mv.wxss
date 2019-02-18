@@ -1,0 +1,35 @@
+/* pages/mv/mv.wxss */
+.ul {
+
+}
+
+.li {
+  padding-top: 20px;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+
+image{
+  
+  width: 690rpx;
+}
+.title {
+  font-size: 16px;
+  margin-bottom:3px;
+}
+
+.con {
+  font-size: 14px;
+  color: #666;
+}
+.context{
+  display: flex;
+  flex-direction: row;
+}
+.con_item{
+  flex: 1;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+
+}

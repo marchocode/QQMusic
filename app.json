@@ -1,13 +1,15 @@
 {
   "pages":[
-    "pages/pai/pai",
+    
+    "pages/mv/mv",
+    "pages/mvPlay/mvPlay",
     "pages/index/index",
     "pages/sou/sou",
-    
+    "pages/pai/pai",
     "pages/showlist/showlist",
     "pages/play/play"
     
-    
+
   ],
   "window":{
     "backgroundTextStyle":"dark",
@@ -22,18 +24,20 @@
       {
       "pagePath": "pages/index/index",
       "text": "推荐"
-     
       },
       {
         "pagePath": "pages/pai/pai",
         "text": "排行"
-        
+      },
+      {
+        "pagePath": "pages/mv/mv",
+        "text": "MV"
       },
       {
         "pagePath": "pages/sou/sou",
         "text": "搜索"
-        
       }
+      
     
     ],
     "color": "#333333",

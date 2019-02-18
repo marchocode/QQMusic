@@ -62,7 +62,8 @@ Page({
         var arr = res.data.split("\n");
 
         var LrcArray = arr.slice(arr.indexOf("[offset:0]")+1);
-
+        
+        console.log(LrcArray);
         LrcArray.forEach(function (item) {
           //遍历数组
 

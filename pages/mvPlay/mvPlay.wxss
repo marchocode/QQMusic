@@ -1,0 +1,23 @@
+/* pages/mvPlay/mvPlay.wxss */
+.context {
+  padding-top: 10px;
+  padding-left: 25rpx;
+  padding-right: 25rpx;
+}
+
+video {
+  width: 700rpx;
+}
+.title {
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.text {
+  font-size: 14px;
+  color: #666;
+}
+.time{
+  margin-top: 10px;
+}

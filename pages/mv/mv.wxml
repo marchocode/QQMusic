@@ -1,0 +1,23 @@
+<view class="ul">
+  <!-- ul start -->
+
+  <block wx:for="{{mvList}}" wx:key="{{item.id}}">
+    <view class='li'>
+    <!-- li start-->
+      <view class='title'>{{item.name}}</view>
+      <image src='{{item.pic}}' id='{{item.id}}' bindtap='jumpMvPlay'></image>
+
+      <view class='context'>
+        <!-- context start -->
+        <view class='con_item con'>{{item.singer}}</view>
+        <view class='con_item con'>{{item.playCount}}</view>
+        <view class='con_item con'>{{item.publictime}}</view>
+        <!-- context end -->
+      </view>
+    <!-- li end -->
+  </view>
+  
+  
+  </block>
+  
+</view>

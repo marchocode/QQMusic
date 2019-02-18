@@ -1,0 +1,15 @@
+<!-- MvPlay -->
+
+<view class='ul'>
+  <view class='context'>
+    <video src='{{MV.url}}' controls  poster="{{MV.pic}}"></video>
+
+
+    <view clasazzs='title'>{{MV.name}}</view>
+    <view class='author text'>{{MV.signer}}</view>
+    <view class='time text'>{{MV.desc}}</view>
+  </view>
+
+  
+
+</view>

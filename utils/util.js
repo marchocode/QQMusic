@@ -8,11 +8,18 @@ var songUrl = "https://api.bzqll.com/music/tencent/song";
 var souUrl = "https://api.bzqll.com/music/tencent/search";
 
 var paiUrl = "https://api.bzqll.com/music/tencent/hotSongList?key=579621905&categoryId=10000000&sortId=3&limit=13";
+
+var mvUrl = "https://api.bzqll.com/music/tencent/hotMvList";
+
+var mvDetail = "https://api.bzqll.com/music/tencent/mv";
+
 //暴露变量
 module.exports = {
   songListUrl: songListUrl,
   urlKey: urlKey,
   songUrl: songUrl,
   souUrl: souUrl,
-  paiUrl: paiUrl
+  paiUrl: paiUrl,
+  mvUrl:mvUrl,
+  mvDetail: mvDetail
 }
