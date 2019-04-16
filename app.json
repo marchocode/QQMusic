@@ -1,11 +1,11 @@
 {
   "pages":[
     
-    "pages/mv/mv",
-    "pages/mvPlay/mvPlay",
     "pages/index/index",
     "pages/sou/sou",
     "pages/pai/pai",
+    "pages/mv/mv",
+    "pages/mvPlay/mvPlay",
     "pages/showlist/showlist",
     "pages/play/play"
     

@@ -28,6 +28,13 @@ Page({
 
     wx.request({
       url: imp.paiUrl,
+      data:{
+        key: imp.urlKey,
+        categoryId: 10000000,
+        sortId:3,
+        limit:10
+      },
+
       method: 'GET',
       dataType: 'json',
       responseType: 'text',

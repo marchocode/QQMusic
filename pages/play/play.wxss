@@ -23,7 +23,10 @@
   padding-bottom: 2.5rem;
   position: relative;
 }
-
+.lrc{
+  height: 64px;
+  line-height: 64px;
+}
 .center-img {
   width: 10.7143rem;
   height: 10.7143rem;

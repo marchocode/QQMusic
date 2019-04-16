@@ -12,7 +12,7 @@
     <!-- img end -->
     <!-- lrc start -->
     <view class='play-lrc'>
-      <view class='lrc' style='height:64px'>
+      <view class='lrc'>
         <text>{{lrcContext}}</text>
       </view>
     </view>
